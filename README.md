@@ -139,9 +139,9 @@
 
 ![mazandi profile](http://mazandi.herokuapp.com/api?handle=kyulee1338&theme=dark)
 
-#### 6. **dohee** (디자인조형학부-정보대\ 소프트웨어벤처)
+#### 6. **dohee** (디자인조형학부-정보대 \ 소프트웨어벤처)
 
-> 백준 !
+> 백준 에메랄드
 
 [![Solved.ac 프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj=helloking1234567890)](https://solved.ac/helloking1234567890)  
 ![언어 - Python](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white)
