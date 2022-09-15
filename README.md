@@ -139,7 +139,7 @@
 
 ![mazandi profile](http://mazandi.herokuapp.com/api?handle=kyulee1338&theme=dark)
 
-#### 6. **dohee** (디자인조형학부-정보대\_소프트웨어벤처)
+#### 6. **dohee** (디자인조형학부-정보대\ 소프트웨어벤처)
 
 > 백준 !
 
