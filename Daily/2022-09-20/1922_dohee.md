@@ -2,7 +2,7 @@
 
 # 백준 1922 네트워크 연결
 
-# 30분 - 유형 kruskal
+# 10분 - 유형 kruskal
 
 # 코드 - Python
 
