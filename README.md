@@ -32,7 +32,7 @@
 
 
 - 월 dohee    
-- 화 ruzen/lime12     
+- 화 ruzen/mj     
 - 수 mj   
 - 목 lime12    
 - 금 erados    
