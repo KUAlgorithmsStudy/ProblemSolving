@@ -13,17 +13,18 @@
 
 ---
 ## 🙏🏻 매일매일 PS 파일 생성 전, 다음 작업을 먼저 해주세요 !!!
-1. git config pull.rebase true
-2. git pull
+**git config pull.rebase true**
+
 
 ## 📕 Setting 
 
 1. git clone https://github.com/KUAlgorithmsStudy/ProblemSolving
 2. git checkout --track origin/dev
-3. (git pull)
+3. git config pull.rebase true
 4. 오늘 폴더에 제출 파일 생성(문제번호_영문nickname.md)
-5. git commit -m "00/00 영문 nickname 제출언어"
-6. git push
+5. git add .
+6. git commit -m "00/00 영문 nickname 제출언어"
+7. git push
 
 ## 🌟 Study Records
 
