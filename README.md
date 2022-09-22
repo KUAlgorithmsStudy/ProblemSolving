@@ -54,8 +54,7 @@
 
 #### 1. **RUZEN** (컴퓨터학과)
 
-> 나이 많습니다. ~~(물어보지 말아주세요)~~ 취업 해야합니다.  
-> 부족하지만 열심히 스터디를 이끌어나가보겠습니다. 잘 부탁드립니다!
+> 
 
 [![Solved.ac 프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj=nachiketa3299)](https://solved.ac/nachiketa3299)  
 ![언어 - CPP](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
