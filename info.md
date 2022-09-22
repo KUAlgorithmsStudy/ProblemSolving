@@ -41,8 +41,9 @@
 
 
 ## 제출
-1. **제출파일 생성전 git pull**
-2. **git config pull.rebase true**
+**제출파일 생성전**
+**git config pull.rebase true**
+**제출파일 생성하고 push해주기**
 
 
 ## 문제 풀이 및 제출
