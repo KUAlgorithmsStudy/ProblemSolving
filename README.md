@@ -109,7 +109,7 @@
 
 ![mazandi profile](http://mazandi.herokuapp.com/api?handle=kyulee1338&theme=dark)
 
-#### 6. **dohee** (디자인조형학부 / 정보대학 소프트웨어벤처)
+#### 6. **dohee** (디자인조형학부 / 정보대학 소프트웨어벤처학과)
 
 > 백준 플라티늄
 
