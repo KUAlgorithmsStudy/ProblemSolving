@@ -43,3 +43,45 @@ print(cost if cost <= K else "Oh no")
 
 
 ```
+# 수정한 코드
+- M -> N 으로 수정
+```python
+import sys
+
+input = sys.stdin.readline
+
+N, M, K = map(int, input().split())
+A = list(map(int, input().split()))
+friendship = [i for i in range(N + 1)]
+
+
+def findFriend(friend):
+    if friend == friendship[friend]:
+        return friend
+    friendship[friend] = findFriend(friendship[friend])
+    return friendship[friend]
+
+
+def unionFriend(a, b):
+    rootA = findFriend(a)
+    rootB = findFriend(b)
+    if rootA == rootB:
+        return
+    if A[rootA - 1] > A[rootB - 1]:
+        friendship[rootA] = rootB
+    else:
+        friendship[rootB] = rootA
+
+
+for _ in range(M):
+    a, b = map(int, input().split())
+    if a != b:
+        unionFriend(a, b)
+
+for i in range(N):
+    findFriend(i + 1)
+
+cost = sum(A[i - 1] for i in list(set(friendship)) if i != 0)
+print(cost if cost <= K else "Oh no")
+
+```
