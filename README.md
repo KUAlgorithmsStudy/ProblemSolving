@@ -12,33 +12,32 @@
 - [(필독!)🔔 스터디 운영 정보](./info.md)
 
 ---
+
 ## 🙏🏻 매일매일 PS 파일 생성 전, 다음 작업을 먼저 해주세요 !!!
+
 **git config pull.rebase true**
 
-
-## 📕 Setting 
+## 📕 Setting
 
 1. git clone https://github.com/KUAlgorithmsStudy/ProblemSolving
 2. git checkout --track origin/dev
 3. git config pull.rebase true
-4. 오늘 폴더에 제출 파일 생성(문제번호_영문nickname.md)
-5. git add .
-6. git commit -m "00/00 영문 nickname 제출언어"
-7. git push
+4. git pull
+5. 오늘 폴더에 제출 파일 생성(문제번호\_영문nickname.md)
+6. git add .
+7. git commit -m "00/00 영문 nickname 제출언어"
+8. git push
 
 ## 🌟 Study Records
 
 > 요일별 문제 선정자 정보입니다.
 
-
-- 월 dohee    
-- 화 ruzen/mj     
-- 수 mj   
-- 목 lime12    
-- 금 erados    
+- 월 dohee
+- 화 sei
+- 수 mj
+- 목 lime12
+- 금 erados
 - 토 dohee (풀이 제출 필수 아님!)
-
-
 
 <!--
 ## 이 페이지를 만드는 데에 도움이 되었던 사이트
@@ -51,7 +50,6 @@
 ## 👥 스터디 참여자 소개
 
 - 프로필을 수정하시고 싶으시면, 직접 수정하시면 됩니다.
-
 
 #### **mj** (산업경영공학부)
 
@@ -87,7 +85,7 @@
 
 #### **dohee** (디자인조형학부 / 정보대학 소프트웨어벤처학과)
 
-> 백준 플라티늄 
+> 백준 플라티늄
 
 [![Solved.ac 프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj=helloking1234567890)](https://solved.ac/helloking1234567890)  
 ![언어 - Python](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white)
@@ -98,13 +96,11 @@
 
 ![mazandi profile](http://mazandi.herokuapp.com/api?handle=helloking1234567890&theme=dark)
 
-
-
 ---
 
 #### **[잠정 중단] RUZEN** (컴퓨터학과)
 
-> 
+>
 
 [![Solved.ac 프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj=nachiketa3299)](https://solved.ac/nachiketa3299)  
 ![언어 - CPP](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
@@ -125,5 +121,3 @@
 ![OS - Mac](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white)
 
 ![mazandi profile](http://mazandi.herokuapp.com/api?handle=kyulee1338&theme=dark)
-
-
