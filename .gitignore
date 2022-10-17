@@ -1,2 +1,4 @@
 # erados 개인 풀이 정리
 /erados
+.gitignore
+main.py
