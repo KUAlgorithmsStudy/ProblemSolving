@@ -1,4 +1,7 @@
 # erados 개인 풀이 정리
 /erados
-.gitignore
+
+# sei
+/sei
 main.py
+*/.DS_Store
