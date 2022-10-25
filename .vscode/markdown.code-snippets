@@ -6,18 +6,19 @@
 			"---",
 			"date: \"${TM_FILENAME_BASE}\"",
 			"문제번호:",
-			"  - ${1:b_prob_num}",
-			"  - ${2:p_prob_num}",
+			"  - ${1:백준_문제_번호}",
+			"  - ${4:프로그래머스_문제_번호}",
 			"---\n",
 			"# ${TM_FILENAME_BASE}\n",
-			"## 1. ${1} ($3)",
-			"https://www.acmicpc.net/problem/${1}\n",
+			"## 1. $1 (${2:백준_문제_제목})",
+			"https://www.acmicpc.net/problem/$1\n",
 			"### 알고리즘 분류",
-			"- $6",
-			"## 2. ${2} ($5)",
-			"https://school.programmers.co.kr/learn/courses/30/lessons/${2}\n",
+			"- ${3:백준_알고리즘_분류}",
+			"",
+			"## 2. $4 (${5:프로그래머스_문제_제목})",
+			"https://school.programmers.co.kr/learn/courses/30/lessons/${4}\n",
 			"### 알고리즘 분류",
-			"- $7"
+			"- ${6:프로그래머스_알고리즘_분류}"
 		],
 		"description": "Make Daily Markdown"
 	}
