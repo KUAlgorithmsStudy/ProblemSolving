@@ -1,57 +1,47 @@
-def solution(board, aloc, bloc):
-    answer = -1
+import math
 
+"""
+실책성 무브는 어떤 line 에서 필터링 되는건
+"""
+
+def solution(board, aloc, bloc):
     R = len(board)
     C = len(board[0])
-    loc = [aloc, bloc]  # a : 0 , b : 1
 
-    # 누가 이길 지 부터 알아내자
-    def move(player, bit_board, step, hist):  # player 가 이길 것인가? -> True/False
-        print(hist)
-        x, y = loc[player]
+    def move(r1, c1, r2, c2, step, player):  # -> (can_win, step)
+        if board[r1][c1] == 0:
+            return False, step
 
-        if not bit_board & (1 << (x * R + y)):
-            return False
-        # if board[x][y] == 0:  # 발판 사라졌으면 짐
-        #     return False
+        max_turn = step
+        min_turn = math.inf
+        my_win = False
+        for dr, dc in ((0, 1), (0, -1), (1, 0), (-1, 0)):
+            nr, nc = r1 + dr, c1 + dc
+            if 0 <= nr < R and 0 <= nc < C and board[nr][nc] == 1:
+                board[r1][c1] = 0
+                other_win, turn = move(r2, c2, nr, nc, step + 1, player ^ 1)
+                if not other_win:
+                    my_win = True
+                    min_turn = min(min_turn, turn)
+                else:  # 이기는 경우가 있다면 굳이 지는 경우는 볼 필요가 없다.
+                    max_turn = max(max_turn, turn)
+                board[r1][c1] = 1
 
-        # 갈 데 있는 지 체크
-        for dx, dy in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
-            nx, ny = x + dx, y + dy
-            if 0 <= nx < R and 0 <= ny < C and board[nx][ny] == 1:
-                loc[player] = (nx, ny)
-                bit_board &= ~(1 << (x * R + y))
-                # board[x][y] = 0
-                hist['a'].append((nx, ny)) if player == 0 else hist['b'].append((nx, ny))
-                if move(1 if player == 0 else 0, bit_board, step + 1, hist):  # 내가 승리 못할거라면 이 길 가면 안됨; 최대한 시간 끌기
-                    print(f'{"a" if player == 0 else "b"} dont want to lose. rollback!')
-                    bit_board |= (1 << (x * R + y))
-                    # board[x][y] = 1
-                    loc[player] = (x, y)
-                    hist['a'].pop() if player == 0 else hist['b'].pop()
-                    print("after rollback", hist)
-                else:  # 내가 승리할 수 있다면 이 길 가야함; 최대한 빨리 끝내기
-                    return True
+        return my_win, min_turn if my_win else max_turn
 
-    bit_board = 0
-    for i in range(R):
-        for j in range(C):
-            bit_board |= board[i][j] << (i * R + j)
-
-    winner = move(0, bit_board, 0, dict(a=[aloc], b=[bloc]))
-    print(winner)
+    my_win, answer = move(*aloc, *bloc, 0, 0)
 
     # 이기는 쪽은 min step 하도록, 지는 쪽은 max step 하도록 움직이자
-    # return answer
+    return answer
 
 
 if __name__ == '__main__':
-    board = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
-    aloc = [1, 0]
-    bloc = [1, 2]
-    print(solution(board, aloc, bloc))  # 5
-
-    # board = [[1, 1, 1], [1, 0, 1], [1, 1, 1]]
+    # board = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
     # aloc = [1, 0]
     # bloc = [1, 2]
-    # print(solution(board, aloc, bloc))  # 4
+    # print(solution(board, aloc, bloc))  # 5
+
+    board = [[1, 1, 1], [1, 0, 1], [1, 1, 1]]
+    aloc = [1, 0]
+    bloc = [1, 2]
+    print(solution(board, aloc, bloc))  # 4
